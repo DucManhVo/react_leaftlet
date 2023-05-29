@@ -1,17 +1,25 @@
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import { useMap } from 'react-leaflet';
 import { useEffect } from 'react';
+import L from 'leaflet';
 import 'leaflet-geosearch/assets/css/leaflet.css'
 
+
+
 const SearchBox = () => {
-    const provider = new OpenStreetMapProvider({
-
+    const customIcon = new L.Icon({
+        iconUrl: require('../assets/images/marker-icon-2x.png'),
+        iconSize: [25, 41]
     });
-
+    const provider = new OpenStreetMapProvider({});
 
     // @ts-ignore
     const searchControl = new GeoSearchControl({
-        provider: provider,
+        marker: {
+            icon: customIcon,
+            draggable: false,
+        },
+        provider: provider
     });
 
     const map = useMap();
@@ -19,7 +27,6 @@ const SearchBox = () => {
         map.addControl(searchControl);
         return () => map.removeControl(searchControl);
     }, []);
-
     return null;
 };
 
