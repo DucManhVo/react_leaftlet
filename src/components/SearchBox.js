@@ -7,23 +7,23 @@ import 'leaflet-geosearch/assets/css/leaflet.css'
 
 
 const SearchBox = () => {
-    const customIcon = new L.Icon({
-        iconUrl: require('../assets/images/marker-icon-2x.png'),
-        iconSize: [25, 41]
-    });
-    const provider = new OpenStreetMapProvider({});
 
     // @ts-ignore
-    const searchControl = new GeoSearchControl({
-        marker: {
-            icon: customIcon,
-            draggable: false,
-        },
-        provider: provider
-    });
 
     const map = useMap();
     useEffect(() => {
+        const searchIcon = new L.Icon({
+            iconUrl: require('../assets/images/searchMarker.png'),
+            iconSize: [40, 40]
+        });
+        const provider = new OpenStreetMapProvider({});
+        const searchControl = new GeoSearchControl({
+            marker: {
+                icon: searchIcon,
+                draggable: false,
+            },
+            provider: provider
+        });
         map.addControl(searchControl);
         return () => map.removeControl(searchControl);
     }, []);
