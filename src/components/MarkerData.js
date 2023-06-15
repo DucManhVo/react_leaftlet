@@ -40,6 +40,8 @@ const MarkerData = () => {
                     Thông tin: {devicesAll[index].ci_description}
                     <br />
                     Địa chỉ: {devicesAll[index].ci_address}
+                    <br />
+                    Hình ảnh <br /> <img src='https://dummyimage.com/300x200/000000/fff'></img>
                 </Popup>
             </Marker>
         )
