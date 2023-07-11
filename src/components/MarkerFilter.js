@@ -37,7 +37,7 @@ const MarkerFilter = () => {
 
     return (
         <div>
-            <div className='leaflet-control' style={{ paddingTop: '10px', paddingLeft: '50px', position: 'relative' }}>
+            <div className='leaflet-control' style={{ paddingTop: '10px', position: 'relative' }}>
                 <div className="input-group mb-3">
                     <label className="input-group-text" htmlFor="inputGroupSelect01">Khách hàng</label>
                     <select className="form-select" id="inputGroupSelect01" onChange={onChangeState}>

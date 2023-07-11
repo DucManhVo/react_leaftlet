@@ -78,7 +78,7 @@ const MarkerFilterPro = () => {
 
     return (
         <div>
-            <div className='leaflet-control' style={{ paddingLeft: '50px', position: 'relative' }}>
+            <div className='leaflet-control' >
                 <div className="input-group mb-3">
                     <label className="input-group-text" htmlFor="inputGroupSelect01">Tỉnh</label>
                     <select className="form-select" id="inputGroupSelect01" onChange={onChangeProvinceState}>
@@ -87,7 +87,7 @@ const MarkerFilterPro = () => {
                     </select>
                 </div>
             </div>
-            <div className='leaflet-control' style={{ paddingLeft: '50px', position: 'relative' }}>
+            <div className='leaflet-control' >
                 <div className="input-group mb-3">
                     <label className="input-group-text" htmlFor="inputGroupSelect02">Huyện</label>
                     <select className="form-select" id="inputGroupSelect02" onChange={onChangeDistrictState}>
@@ -96,7 +96,7 @@ const MarkerFilterPro = () => {
                     </select>
                 </div>
             </div>
-            <div className='leaflet-control' style={{ paddingLeft: '50px', position: 'relative' }}>
+            <div className='leaflet-control' >
                 <div className="input-group mb-3">
                     <label className="input-group-text" htmlFor="inputGroupSelect03">Phường, Xã</label>
                     <select className="form-select" id="inputGroupSelect03" onChange={onChangeWardState}>

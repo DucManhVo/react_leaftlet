@@ -11,6 +11,7 @@ import { Marker, Popup } from 'react-leaflet';
 const MarkerData = () => {
 
     const [state, setState] = useContext(Context);
+    const url = `http://localhost:8800/${state.action}`;
 
     const deviceIcon = new L.Icon({
         iconUrl: require('../assets/images/deviceMarker.png'),
@@ -22,11 +23,11 @@ const MarkerData = () => {
     const [devicesAll, setDevices] = useState("");
 
     useEffect(() => {
-        Axios.get(`http://localhost:8800/${state.action}`).then((res) => {
+        Axios.get(url).then((res) => {
             setDevices(res.data)
             console.log(res)
         })
-    }, [state.action])
+    }, [url])
 
     const deviceList = [];
     for (let index = 0; index < devicesAll.length; index++) {

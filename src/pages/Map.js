@@ -2,11 +2,11 @@ import React from 'react'
 import { useRef } from 'react';
 import { MapContainer, TileLayer, useMapEvent } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster';
-import SearchBox from './SearchBox';
-import MarkerData from './MarkerData';
-import MarkerFilter from './MarkerFilter';
+import ModalDialog from '../components/ModalControl';
+import SearchBox from '../components/SearchBox';
+import MarkerData from '../components/MarkerData';
+import 'reactjs-popup/dist/index.css';
 import 'leaflet/dist/leaflet.css';
-import MarkerFilterPro from './MarkerFilterPro';
 
 
 
@@ -41,8 +41,7 @@ const Map = () => {
                     <MarkerData />
                 </MarkerClusterGroup>
                 <SearchBox />
-                <MarkerFilter />
-                <MarkerFilterPro />
+                <ModalDialog />
                 {/* <SetViewOnClick animateRef={animateRef}></SetViewOnClick> */}
             </MapContainer>
         </div>

@@ -4,6 +4,9 @@ const Context = createContext();
 
 const initalState = {
     action: "",
+    postAction: "",
+    putAction: "",
+    deleteId: "",
     type: "",
     code: "",
     area_province: "",
